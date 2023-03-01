@@ -7,9 +7,8 @@
 struct Matrix {
     int *matrix = nullptr;
     int size;
-    bool tag;
 
-    inline explicit Matrix(int _size) : size(_size), tag(false) {
+    inline explicit Matrix(int _size) : size(_size) {
         matrix = new int[size * size];
         std::fill(matrix, matrix + size * size, 0);
     }
@@ -82,7 +81,7 @@ Matrix makeUp(const Matrix& M, int size, int x, int y) {
     Matrix res(size);
     for (int i = 0; i < size; i ++ )
         for (int j = 0; j < size; j ++ )
-            res(i, j) = M(i + x, j + y), res.tag;
+            res(i, j) = M(i + x, j + y);
     return res;
 }
 
