@@ -1,27 +1,32 @@
 #include <iostream>
+#include <algorithm>
 #include <random>
 #include <ctime>
+#include <string>
 #include <thread>
-#include <mutex>
+#include <fstream>
+#include <windows.h>
+
+#define MIN 32
 
 struct Matrix {
     int *matrix = nullptr;
     int size;
 
-    inline explicit Matrix(int _size) : size(_size) {
+    inline explicit Matrix(int _size = 0) : size(_size) {
         matrix = new int[size * size];
         std::fill(matrix, matrix + size * size, 0);
     }
 
     inline ~Matrix() {
         delete[] matrix;
+        matrix = nullptr;
     }
 
     inline Matrix &operator=(const Matrix &M) {
-        ;
-        size = M.size;
+        delete[] matrix;
         matrix = new int[size * size];
-        memcpy(matrix, M.matrix, size * size);
+        memcpy(matrix, M.matrix, size * size * sizeof(int));
         return *this;
     }
 
@@ -42,8 +47,8 @@ struct Matrix {
 };
 
 void input(Matrix& A, int n, int m) {
-    static std::uniform_int_distribution<unsigned> u(-200, 200);
-    static std::default_random_engine e;
+    std::uniform_int_distribution<int> u(-200, 200);
+    std::default_random_engine e;
     for (int i = 0; i < n; i++)
         for (int j = 0; j < m; j++)
             A(i, j) = u(e);
@@ -95,12 +100,11 @@ void merge(Matrix& res, const Matrix& M, int x, int y) {
 void strassenMul(Matrix &C, const Matrix &A, const Matrix &B, int depth) {
     int size = A.size;
 
-    int n = 32;
-    if (A.selfCheck() & B.selfCheck()) {
+    if (A.selfCheck() | B.selfCheck()) {
         C = Matrix(size);
         return;
-    } else if (size == n) {
-        C = mul(A, B, n, n, n);
+    } else if (size <= MIN) {
+        C = mul(A, B, size, size, size);
         return;
     }
 
@@ -133,7 +137,6 @@ void strassenMul(Matrix &C, const Matrix &A, const Matrix &B, int depth) {
         t5.join();
         t6.join();
         t7.join();
-
     } else {
         strassenMul(M1, A11, sub(B12, B22), depth + 1);
         strassenMul(M2, add(A11, A12), B22, depth + 1);
@@ -156,23 +159,45 @@ void strassenMul(Matrix &C, const Matrix &A, const Matrix &B, int depth) {
 }
 
 int main() {
-    int n, m, p, size;
-    n = m = p = 1600;
-    clock_t begin = clock();
-    int len = std::max(n, std::max(m, p));
-    int cur = 1;
-    for (int i = 0;; i++, cur *= 2)
-        if (len <= cur) {
-            size = cur;
-            break;
-        }
-    Matrix A(size), B(size), C(size);
-    input(A, n, m), input(B, m, p);
+    std::fstream file("data.csv", std::ios::out | std::ios::app);
 
-//    C = mul(A, B, n, m, p);
-    strassenMul(C, A, B, 0);
+    puts("------------------");
+    std::default_random_engine e;
+    for (int i = 10; i < 3000; i += 10) {
+        std::uniform_int_distribution<unsigned> u(i - 5, i + 5);
+        printf("N:%d\n", i);
+        file << i / 10 << ',';
+        int n, m, p, size;
+        n = u(e), m = u(e), p = u(e);
+        int len = std::max(n, std::max(m, p));
+        for (int cur = 1;; cur *= 2)
+            if (len <= cur) {
+                size = cur;
+                break;
+            }
 
-    printf("Time: %.2lfs\n", (double) (clock() - begin) / 1000);
+        Matrix A(size), B(size), C(size);
+        input(A, n, m), input(B, m, p);
+        clock_t begin1 = clock();
+        C = mul(A, B, n, m, p);
+        clock_t end1 = clock();
+        clock_t time1 = end1 - begin1;
+        printf("Time for Mul n^3:%ldms\n", time1);
+        file << std::to_string(time1) << ',';
+
+        A.~Matrix(), B.~Matrix(), C.~Matrix();
+        A = Matrix(size), B = Matrix(size), C = Matrix(size);
+        input(A, n, m), input(B, m, p);
+        clock_t begin2 = clock();
+        strassenMul(C, A, B, 0);
+        clock_t end2 = clock();
+        clock_t time2 = end2 - begin2;
+        printf("Time for StrassenMul n^(log7):%ldms\n", time2);
+        file << std::to_string(time2) << std::endl;
+        puts("------------------");
+    }
+
+    file.close();
 
     return 0;
 }
