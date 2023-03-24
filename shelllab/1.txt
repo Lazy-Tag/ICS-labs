@@ -1,0 +1,408 @@
+#
+# trace13.txt - Restart every stopped process in process group
+#
+tsh> ./mysplit 4
+Job [1] (12682) stopped by signal 20
+tsh> jobs
+[1] (12682) Stopped ./mysplit 4 
+tsh> /bin/ps a
+  PID TTY      STAT   TIME COMMAND
+  580 pts/55   S      0:13 ./tsh -p
+  581 pts/55   Z      0:00 [echo] <defunct>
+  658 pts/55   S      0:13 ./tsh -p
+  659 pts/55   Z      0:00 [echo] <defunct>
+  718 pts/55   S      0:14 ./tsh -p
+  719 pts/55   Z      0:00 [echo] <defunct>
+  928 pts/55   S      0:13 ./tsh -p
+  929 pts/55   Z      0:00 [echo] <defunct>
+ 1031 pts/55   S      0:13 ./tsh -p
+ 1032 pts/55   Z      0:00 [echo] <defunct>
+ 1131 pts/441  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201613/.vscode-server-insiders/bin/fa13bf16fd237afef07f4df0648da026f43e3963/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 1521 pts/367  Ss     0:00 /bin/bash --init-file /mnt/ics1-2020/2021201729/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 1603 tty1     Ss+    0:00 /sbin/agetty --noclear tty1 linux
+ 1835 pts/212  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201632/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 2137 pts/409  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201552/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 2700 pts/160  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201729/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 2736 pts/73   S      0:00 ./tsh -p
+ 2965 pts/73   S      0:00 ./tsh -p
+ 3046 pts/73   S      0:00 ./tsh -p
+ 3118 pts/310  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201709/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 3362 pts/73   S      0:00 ./tsh -p
+ 3409 pts/287  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201613/.vscode-server-insiders/bin/c97d5812f10c28efbcdb1fd404bc25afae873312/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 3617 pts/43   Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200834/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 3841 pts/73   S      0:00 ./tsh -p
+ 4295 pts/451  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201729/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 4326 pts/73   S      0:00 ./tsh -p
+ 4399 pts/414  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021202188/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 4606 pts/601  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200925/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 5032 pts/61   Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201596/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 5057 pts/384  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021202301/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 5308 pts/456  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201372/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 5417 pts/598  Ss+    0:00 -bash
+ 5998 pts/73   S      0:00 ./tsh -p
+ 6002 pts/73   T      0:00 ./myspin 5
+ 6126 pts/73   S      0:00 ./tsh -p
+ 6130 pts/73   T      0:00 ./myspin 5
+ 6176 pts/503  Ss     0:00 -bash
+ 6205 pts/73   S      0:00 ./tsh -p
+ 6209 pts/73   T      0:00 ./myspin 5
+ 6715 pts/513  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201372/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 6852 pts/419  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201761/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 6938 pts/552  S+     0:00 grade-shlab.pl                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+ 7329 pts/73   Ss+    0:01 /bin/bash --init-file /mnt/ics1-2020/2021201768/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 7331 pts/445  Ss+    0:00 /usr/bin/bash --init-file /mnt/ics1-2020/2021201775/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 7347 pts/342  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201679/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 7393 pts/233  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021202301/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 8092 pts/527  Ss     0:00 /bin/bash --init-file /mnt/ics1-2020/2021201339/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 8158 pts/617  Ss     0:00 /usr/bin/bash --init-file /mnt/ics1-2020/2021201691/.vscode-server/bin/784b0177c56c607789f9638da7b6bf3230d47a8c/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 8216 pts/618  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201688/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 8261 pts/508  S      0:00 ./tsh -p
+ 8263 pts/508  T      0:00 ./mystop 2
+ 8443 pts/617  S+     0:00 grade-shlab.pl                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+ 8656 pts/349  S+     0:00 ./tsh
+ 8893 pts/623  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201632/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 8910 pts/487  S+     0:00 vim tsh.c
+ 9100 pts/391  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201761/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 9198 pts/528  Ss     0:00 bash --rcfile /dev/fd/63
+ 9414 pts/468  Ss+    0:00 -bash
+ 9593 pts/201  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200943/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 9767 pts/202  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200943/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+10054 pts/628  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201761/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+10570 pts/4    Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201681/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+10707 pts/138  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200925/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+10933 pts/138  T      0:00 make test02
+10934 pts/138  T      0:00 /usr/bin/perl ./sdriver.pl -t trace02.txt -s ./tsh -a -p
+10935 pts/138  S      0:00 ./tsh -p
+11119 pts/487  Ss     0:00 /bin/bash --init-file /mnt/ics1-2020/2021201729/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+11370 pts/492  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200967/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+11748 pts/664  S+     0:00 grade-shlab.pl                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+11895 pts/527  S+     0:00 ./tshref
+12377 pts/528  S+     0:01 vim tsh.c
+12526 pts/395  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201679/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+12533 pts/552  S+     0:00 sh -c cd /tmp/tsh.c.6938; ./checktsh.pl -e -t trace15.txt
+12534 pts/552  S+     0:00 /usr/bin/perl ./checktsh.pl -e -t trace15.txt
+12601 pts/617  S+     0:00 sh -c cd /tmp/tsh.c.8443; ./checktsh.pl -e -t trace10.txt
+12602 pts/617  S+     0:00 /usr/bin/perl ./checktsh.pl -e -t trace10.txt
+12607 pts/617  S+     0:00 /usr/bin/perl ./sdriver.pl -t trace10.txt -s ./tshref -a -p
+12608 pts/617  S+     0:00 ./tshref -p
+12610 pts/617  S      0:00 ./myspin 4
+12631 pts/664  S+     0:00 sh -c cd /tmp/tsh.c.11748; ./checktsh.pl -e -t trace08.txt
+12632 pts/664  S+     0:00 /usr/bin/perl ./checktsh.pl -e -t trace08.txt
+12636 pts/664  S+     0:00 /usr/bin/perl ./sdriver.pl -t trace08.txt -s ./tshref -a -p
+12637 pts/664  Z+     0:00 [tshref] <defunct>
+12639 pts/664  S      0:00 ./myspin 4
+12643 pts/530  Ss     0:00 /bin/bash --init-file /mnt/ics1-2020/2021201552/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+12679 pts/503  S+     0:00 /usr/bin/perl ./sdriver.pl -t trace13.txt -s ./tshref -a -p
+12680 pts/503  S+     0:00 ./tshref -p
+12682 pts/503  T      0:00 ./mysplit 4
+12683 pts/503  T      0:00 ./mysplit 4
+12702 pts/552  S+     0:00 /usr/bin/perl ./sdriver.pl -t trace15.txt -s ./tsh -a -p
+12703 pts/552  S+     0:00 ./tsh -p
+12732 pts/552  S      0:00 ./myspin 10
+12764 pts/138  T      0:00 make test02
+12765 pts/138  T      0:00 /usr/bin/perl ./sdriver.pl -t trace02.txt -s ./tsh -a -p
+12766 pts/138  S      0:00 ./tsh -p
+12768 pts/138  Z      0:00 [tsh] <defunct>
+12774 pts/530  S+     0:00 /usr/bin/perl ./sdriver.pl -t trace08.txt -s ./tsh -a -p
+12775 pts/530  S+     0:00 ./tsh -p
+12777 pts/530  S+     0:00 ./myspin 4
+12779 pts/530  S+     0:00 ./myspin 5
+12787 pts/503  R      0:00 /bin/ps a
+13004 pts/138  T      0:00 make test02
+13005 pts/138  T      0:00 /usr/bin/perl ./sdriver.pl -t trace02.txt -s ./tsh -a -p
+13006 pts/138  S      0:00 ./tsh -p
+13007 pts/138  Z      0:00 [tsh] <defunct>
+13215 pts/138  T      0:00 make test02
+13216 pts/138  T      0:00 /usr/bin/perl ./sdriver.pl -t trace02.txt -s ./tsh -a -p
+13217 pts/138  S      0:00 ./tsh -p
+13218 pts/138  Z      0:00 [tsh] <defunct>
+14756 pts/486  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2020104157/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+14830 pts/47   Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200967/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+15964 pts/462  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201663/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+16098 pts/212  S      0:00 ./tsh -p
+16099 pts/212  Z      0:00 [echo] <defunct>
+16322 pts/212  S      0:00 ./tsh -p
+16324 pts/212  Z      0:00 [echo] <defunct>
+16551 pts/90   Ss     0:00 /bin/bash --init-file /mnt/ics1-2020/2021200943/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+16724 pts/90   S+     0:00 vim tsh.c
+16741 pts/552  Ss     0:00 /bin/bash --init-file /mnt/ics1-2020/2021201645/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+16770 pts/310  T      0:00 make test02
+16771 pts/310  T      0:00 /usr/bin/perl ./sdriver.pl -t trace02.txt -s ./tsh -a -p
+16772 pts/310  S      0:00 ./tsh -p
+16975 pts/229  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021202438/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+17660 pts/180  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201746/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+17802 pts/487  T      0:00 vim tsh.c
+17978 pts/367  S+     0:00 vim tsh.c
+18128 pts/73   S      0:00 ./tsh -p
+18132 pts/73   T      0:00 ./myspin 5
+18474 pts/563  Ss+    0:00 -bash
+18835 pts/643  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201632/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+20105 pts/168  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200967/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+20143 pts/112  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200925/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+20780 pts/359  T      0:00 python
+21471 pts/653  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200943/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+21954 pts/253  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201709/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+22275 pts/267  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021202301/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+22349 pts/146  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201632/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+22638 pts/286  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201663/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+23303 pts/65   Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201768/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+23437 pts/659  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201679/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+23684 pts/65   S      0:00 ./tsh -p
+23685 pts/65   Z      0:00 [echo] <defunct>
+24625 pts/328  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021202301/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+24905 pts/133  Ss+    0:00 /usr/bin/bash --init-file /mnt/ics1-2020/2021201663/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+25258 pts/349  Ss     0:00 /bin/bash --init-file /mnt/ics1-2020/2021202301/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+25827 pts/66   Ss+    0:00 /bin/bash
+26718 pts/665  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201761/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+27099 pts/73   S      0:00 ./tsh -p
+27100 pts/73   Z      0:00 [echo] <defunct>
+27276 pts/73   S      0:00 ./tsh -p
+27277 pts/73   Z      0:00 [echo] <defunct>
+27369 pts/73   S      0:00 ./tsh -p
+27370 pts/73   Z      0:00 [echo] <defunct>
+27451 pts/73   S      0:00 ./tsh -p
+27452 pts/73   Z      0:00 [echo] <defunct>
+27543 pts/73   S      0:00 ./tsh -p
+27544 pts/73   Z      0:00 [echo] <defunct>
+27671 pts/73   S      0:00 ./tsh -p
+27672 pts/73   Z      0:00 [echo] <defunct>
+27710 pts/334  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201716/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+27712 pts/292  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201819/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+27876 pts/664  Ss     0:00 -bash
+27912 pts/666  Ss+    0:00 /usr/bin/bash --init-file /mnt/ics1-2020/2021201509/.vscode-server/bin/5235c6bb189b60b01b1f49062f4ffa42384f8c91/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+27994 pts/73   S     86:41 ./tsh -p
+28183 pts/73   S     86:31 ./tsh -p
+28251 pts/73   S     86:21 ./tsh -p
+28316 pts/73   S     86:38 ./tsh -p
+28400 pts/73   S     86:38 ./tsh -p
+28533 pts/508  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201503/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+28584 pts/73   S     86:58 ./tsh -p
+28689 pts/73   S     86:47 ./tsh -p
+29023 pts/508  S      0:00 ./tsh -p
+29025 pts/508  T      0:00 ./mystop 2
+29148 pts/73   S     86:20 ./tsh -p
+29282 pts/73   S     86:29 ./tsh -p
+29349 pts/434  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201339/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+29390 pts/191  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200925/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+29712 pts/73   S     86:43 ./tsh -p
+30192 pts/73   S     85:55 ./tsh -p
+30801 pts/471  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2020104157/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+31347 pts/73   S      0:00 ./tsh -p
+31349 pts/73   Z      0:00 [echo] <defunct>
+31818 pts/73   S      0:00 ./tsh -p
+32079 pts/73   S      0:00 ./tsh -p
+32080 pts/73   Z      0:00 [echo] <defunct>
+32096 pts/663  Ss+    0:00 -bash
+32153 pts/193  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200925/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+32296 pts/179  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201768/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+32333 pts/55   Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201527/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+32484 pts/55   S      0:12 ./tsh -p
+32485 pts/55   Z      0:00 [echo] <defunct>
+32605 pts/359  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201613/.vscode-server-insiders/bin/c97d5812f10c28efbcdb1fd404bc25afae873312/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+32707 pts/521  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201746/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+32725 pts/55   S      0:12 ./tsh -p
+32726 pts/55   Z      0:00 [echo] <defunct>
+tsh> fg %1
+tsh> /bin/ps a
+  PID TTY      STAT   TIME COMMAND
+  580 pts/55   S      0:13 ./tsh -p
+  581 pts/55   Z      0:00 [echo] <defunct>
+  658 pts/55   S      0:13 ./tsh -p
+  659 pts/55   Z      0:00 [echo] <defunct>
+  718 pts/55   S      0:14 ./tsh -p
+  719 pts/55   Z      0:00 [echo] <defunct>
+  928 pts/55   S      0:13 ./tsh -p
+  929 pts/55   Z      0:00 [echo] <defunct>
+ 1031 pts/55   S      0:13 ./tsh -p
+ 1032 pts/55   Z      0:00 [echo] <defunct>
+ 1131 pts/441  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201613/.vscode-server-insiders/bin/fa13bf16fd237afef07f4df0648da026f43e3963/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 1521 pts/367  Ss     0:00 /bin/bash --init-file /mnt/ics1-2020/2021201729/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 1603 tty1     Ss+    0:00 /sbin/agetty --noclear tty1 linux
+ 1835 pts/212  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201632/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 2137 pts/409  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201552/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 2700 pts/160  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201729/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 2736 pts/73   S      0:00 ./tsh -p
+ 2965 pts/73   S      0:00 ./tsh -p
+ 3046 pts/73   S      0:00 ./tsh -p
+ 3118 pts/310  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201709/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 3362 pts/73   S      0:00 ./tsh -p
+ 3409 pts/287  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201613/.vscode-server-insiders/bin/c97d5812f10c28efbcdb1fd404bc25afae873312/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 3617 pts/43   Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200834/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 3841 pts/73   S      0:00 ./tsh -p
+ 4295 pts/451  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201729/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 4326 pts/73   S      0:00 ./tsh -p
+ 4399 pts/414  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021202188/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 4606 pts/601  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200925/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 5032 pts/61   Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201596/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 5057 pts/384  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021202301/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 5308 pts/456  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201372/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 5417 pts/598  Ss+    0:00 -bash
+ 5998 pts/73   S      0:00 ./tsh -p
+ 6002 pts/73   T      0:00 ./myspin 5
+ 6126 pts/73   S      0:00 ./tsh -p
+ 6130 pts/73   T      0:00 ./myspin 5
+ 6176 pts/503  Ss     0:00 -bash
+ 6205 pts/73   S      0:00 ./tsh -p
+ 6209 pts/73   T      0:00 ./myspin 5
+ 6715 pts/513  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201372/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 6852 pts/419  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201761/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 6938 pts/552  S+     0:00 grade-shlab.pl                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+ 7329 pts/73   Ss+    0:01 /bin/bash --init-file /mnt/ics1-2020/2021201768/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 7331 pts/445  Ss+    0:00 /usr/bin/bash --init-file /mnt/ics1-2020/2021201775/.vscode-server/bin/74b1f979648cc44d385a2286793c226e611f59e7/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 7347 pts/342  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201679/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 7393 pts/233  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021202301/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 8092 pts/527  Ss     0:00 /bin/bash --init-file /mnt/ics1-2020/2021201339/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 8158 pts/617  Ss     0:00 /usr/bin/bash --init-file /mnt/ics1-2020/2021201691/.vscode-server/bin/784b0177c56c607789f9638da7b6bf3230d47a8c/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 8216 pts/618  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201688/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 8261 pts/508  S      0:00 ./tsh -p
+ 8263 pts/508  T      0:00 ./mystop 2
+ 8443 pts/617  S+     0:00 grade-shlab.pl                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+ 8656 pts/349  S+     0:00 ./tsh
+ 8893 pts/623  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201632/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 8910 pts/487  S+     0:00 vim tsh.c
+ 9100 pts/391  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201761/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 9198 pts/528  Ss     0:00 bash --rcfile /dev/fd/63
+ 9414 pts/468  Ss+    0:00 -bash
+ 9593 pts/201  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200943/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 9767 pts/202  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200943/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+10054 pts/628  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201761/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+10570 pts/4    Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201681/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+10707 pts/138  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200925/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+10933 pts/138  T      0:00 make test02
+10934 pts/138  T      0:00 /usr/bin/perl ./sdriver.pl -t trace02.txt -s ./tsh -a -p
+10935 pts/138  S      0:00 ./tsh -p
+11119 pts/487  Ss     0:00 /bin/bash --init-file /mnt/ics1-2020/2021201729/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+11370 pts/492  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200967/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+11748 pts/664  S+     0:00 grade-shlab.pl                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+11895 pts/527  S+     0:00 ./tshref
+12377 pts/528  S+     0:02 vim tsh.c
+12526 pts/395  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201679/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+12533 pts/552  S+     0:00 sh -c cd /tmp/tsh.c.6938; ./checktsh.pl -e -t trace15.txt
+12534 pts/552  S+     0:00 /usr/bin/perl ./checktsh.pl -e -t trace15.txt
+12601 pts/617  S+     0:00 sh -c cd /tmp/tsh.c.8443; ./checktsh.pl -e -t trace10.txt
+12602 pts/617  S+     0:00 /usr/bin/perl ./checktsh.pl -e -t trace10.txt
+12631 pts/664  S+     0:00 sh -c cd /tmp/tsh.c.11748; ./checktsh.pl -e -t trace08.txt
+12632 pts/664  S+     0:00 /usr/bin/perl ./checktsh.pl -e -t trace08.txt
+12643 pts/530  Ss     0:00 /bin/bash --init-file /mnt/ics1-2020/2021201552/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+12679 pts/503  S+     0:00 /usr/bin/perl ./sdriver.pl -t trace13.txt -s ./tshref -a -p
+12680 pts/503  S+     0:00 ./tshref -p
+12702 pts/552  S+     0:00 /usr/bin/perl ./sdriver.pl -t trace15.txt -s ./tsh -a -p
+12703 pts/552  S+     0:00 ./tsh -p
+12764 pts/138  T      0:00 make test02
+12765 pts/138  T      0:00 /usr/bin/perl ./sdriver.pl -t trace02.txt -s ./tsh -a -p
+12766 pts/138  S      0:00 ./tsh -p
+12768 pts/138  Z      0:00 [tsh] <defunct>
+12774 pts/530  S+     0:00 /usr/bin/perl ./sdriver.pl -t trace08.txt -s ./tsh -a -p
+12775 pts/530  S+     0:00 ./tsh -p
+12777 pts/530  S+     0:00 ./myspin 4
+12779 pts/530  T+     0:00 ./myspin 5
+12795 pts/617  S+     0:00 /usr/bin/perl ./sdriver.pl -t trace10.txt -s ./tsh -a -p
+12797 pts/617  R+     0:00 ./tsh -p
+12800 pts/617  S      0:00 ./myspin 4
+12811 pts/552  S      0:00 ./myspin 3
+12813 pts/552  S      0:00 ./myspin 4
+12819 pts/508  S+     0:00 grade-shlab.pl                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+12963 pts/664  S+     0:00 /usr/bin/perl ./sdriver.pl -t trace08.txt -s ./tsh -a -p
+12967 pts/664  S+     0:00 ./tsh -p
+12969 pts/664  S      0:00 ./myspin 4
+12971 pts/664  S      0:00 ./myspin 5
+12975 pts/508  S+     0:00 sh -c cd /tmp/tsh.c.12819; ./checktsh.pl -e -t trace04.txt
+12976 pts/508  S+     0:00 /usr/bin/perl ./checktsh.pl -e -t trace04.txt
+12980 pts/508  S+     0:00 /usr/bin/perl ./sdriver.pl -t trace04.txt -s ./tshref -a -p
+12981 pts/508  Z+     0:00 [tshref] <defunct>
+12983 pts/508  S      0:00 ./myspin 1
+12997 pts/503  R      0:00 /bin/ps a
+13004 pts/138  T      0:00 make test02
+13005 pts/138  T      0:00 /usr/bin/perl ./sdriver.pl -t trace02.txt -s ./tsh -a -p
+13006 pts/138  S      0:00 ./tsh -p
+13007 pts/138  Z      0:00 [tsh] <defunct>
+13215 pts/138  T      0:00 make test02
+13216 pts/138  T      0:00 /usr/bin/perl ./sdriver.pl -t trace02.txt -s ./tsh -a -p
+13217 pts/138  S      0:00 ./tsh -p
+13218 pts/138  Z      0:00 [tsh] <defunct>
+14756 pts/486  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2020104157/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+14830 pts/47   Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200967/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+15964 pts/462  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201663/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+16098 pts/212  S      0:00 ./tsh -p
+16099 pts/212  Z      0:00 [echo] <defunct>
+16322 pts/212  S      0:00 ./tsh -p
+16324 pts/212  Z      0:00 [echo] <defunct>
+16551 pts/90   Ss     0:00 /bin/bash --init-file /mnt/ics1-2020/2021200943/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+16724 pts/90   S+     0:00 vim tsh.c
+16741 pts/552  Ss     0:00 /bin/bash --init-file /mnt/ics1-2020/2021201645/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+16770 pts/310  T      0:00 make test02
+16771 pts/310  T      0:00 /usr/bin/perl ./sdriver.pl -t trace02.txt -s ./tsh -a -p
+16772 pts/310  S      0:00 ./tsh -p
+16975 pts/229  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021202438/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+17660 pts/180  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201746/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+17802 pts/487  T      0:00 vim tsh.c
+17978 pts/367  S+     0:00 vim tsh.c
+18128 pts/73   S      0:00 ./tsh -p
+18132 pts/73   T      0:00 ./myspin 5
+18474 pts/563  Ss+    0:00 -bash
+18835 pts/643  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201632/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+20105 pts/168  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200967/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+20143 pts/112  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200925/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+20780 pts/359  T      0:00 python
+21471 pts/653  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200943/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+21954 pts/253  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201709/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+22275 pts/267  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021202301/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+22349 pts/146  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201632/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+22638 pts/286  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201663/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+23303 pts/65   Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201768/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+23437 pts/659  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201679/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+23684 pts/65   S      0:00 ./tsh -p
+23685 pts/65   Z      0:00 [echo] <defunct>
+24625 pts/328  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021202301/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+24905 pts/133  Ss+    0:00 /usr/bin/bash --init-file /mnt/ics1-2020/2021201663/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+25258 pts/349  Ss     0:00 /bin/bash --init-file /mnt/ics1-2020/2021202301/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+25827 pts/66   Ss+    0:00 /bin/bash
+26718 pts/665  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201761/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+27099 pts/73   S      0:00 ./tsh -p
+27100 pts/73   Z      0:00 [echo] <defunct>
+27276 pts/73   S      0:00 ./tsh -p
+27277 pts/73   Z      0:00 [echo] <defunct>
+27369 pts/73   S      0:00 ./tsh -p
+27370 pts/73   Z      0:00 [echo] <defunct>
+27451 pts/73   S      0:00 ./tsh -p
+27452 pts/73   Z      0:00 [echo] <defunct>
+27543 pts/73   S      0:00 ./tsh -p
+27544 pts/73   Z      0:00 [echo] <defunct>
+27671 pts/73   S      0:00 ./tsh -p
+27672 pts/73   Z      0:00 [echo] <defunct>
+27710 pts/334  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201716/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+27712 pts/292  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201819/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+27876 pts/664  Ss     0:00 -bash
+27912 pts/666  Ss+    0:00 /usr/bin/bash --init-file /mnt/ics1-2020/2021201509/.vscode-server/bin/5235c6bb189b60b01b1f49062f4ffa42384f8c91/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+27994 pts/73   S     86:41 ./tsh -p
+28183 pts/73   S     86:31 ./tsh -p
+28251 pts/73   S     86:21 ./tsh -p
+28316 pts/73   S     86:38 ./tsh -p
+28400 pts/73   S     86:38 ./tsh -p
+28533 pts/508  Ss     0:00 /bin/bash --init-file /mnt/ics1-2020/2021201503/.vscode-server/bin/92da9481c0904c6adfe372c12da3b7748d74bdcb/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+28584 pts/73   S     86:58 ./tsh -p
+28689 pts/73   S     86:47 ./tsh -p
+29023 pts/508  S      0:00 ./tsh -p
+29025 pts/508  T      0:00 ./mystop 2
+29148 pts/73   S     86:20 ./tsh -p
+29282 pts/73   S     86:29 ./tsh -p
+29349 pts/434  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201339/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+29390 pts/191  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200925/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+29712 pts/73   S     86:43 ./tsh -p
+30192 pts/73   S     85:55 ./tsh -p
+30801 pts/471  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2020104157/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+31347 pts/73   S      0:00 ./tsh -p
+31349 pts/73   Z      0:00 [echo] <defunct>
+31818 pts/73   S      0:00 ./tsh -p
+32079 pts/73   S      0:00 ./tsh -p
+32080 pts/73   Z      0:00 [echo] <defunct>
+32096 pts/663  Ss+    0:00 -bash
+32153 pts/193  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021200925/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+32296 pts/179  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201768/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+32333 pts/55   Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201527/.vscode-server/bin/5e805b79fcb6ba4c2d23712967df89a089da575b/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+32484 pts/55   S      0:12 ./tsh -p
+32485 pts/55   Z      0:00 [echo] <defunct>
+32605 pts/359  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201613/.vscode-server-insiders/bin/c97d5812f10c28efbcdb1fd404bc25afae873312/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+32707 pts/521  Ss+    0:00 /bin/bash --init-file /mnt/ics1-2020/2021201746/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+32725 pts/55   S      0:12 ./tsh -p
+32726 pts/55   Z      0:00 [echo] <defunct>
