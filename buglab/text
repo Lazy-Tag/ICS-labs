@@ -1,0 +1,56 @@
+violetStore.cpp
+--- buggy/violetStore.cpp	2022-10-07 03:44:31.000000000 -0400
++++ fixed/violetStore.cpp	2022-10-18 07:08:27.776630033 -0400
+@@ -2,31 +2,35 @@
+ #include <string>
+ #define min(a,b) a<=b?a:b
+ 
+-class price 
++class price
+ {
+ private:
+     int n;                  // item's number
+     std::string* items;     // item's name
+     int* prices;            // item's price
+     std::string store;      // store's name
++    int cnt;
+ public:
+     price()
+     {
+-        store = "Violet";   
++        n = 3;
++        store = "Violet";
+         items = new std::string[3]; // I'm poor, max 3 items
+         prices = new int[3];
++        cnt = 0;
+     }
+     ~price()
+     {
+-        delete items;
+-        delete prices;
++        delete[] items;
++        delete[] prices;
+     }
+-    void add_item(std::string name, int price) 
++    void add_item(std::string name, int price)
+     {
+-        *items++ = name;
+-        *prices++ = price;
++        items[cnt] = name;
++        prices[cnt] = price;
++        cnt ++ ;
+     }
+-    void print_items() 
++    void print_items()
+     {
+         std::cout << "items of " << store << ":\n";
+         for(int i = 0; i < n; ++i)
+@@ -40,7 +44,7 @@ public:
+ 
+ int main()
+ {
+-    price* test = (price*)malloc(sizeof(price));
++    price* test = new price();
+     test->add_item("apple", 1);
+     test->add_item("banana", 3);
+     test->add_item("cherry", 2);

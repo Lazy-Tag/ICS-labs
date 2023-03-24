@@ -1,0 +1,44 @@
+antbuster.cpp
+--- buggy/antbuster.cpp	2022-10-07 03:44:31.000000000 -0400
++++ fixed/antbuster.cpp	2022-10-18 09:28:51.670600229 -0400
+@@ -112,10 +112,15 @@ void Tower::Fire(){
+         return;
+     double dx=this->x-target->x;
+     double dy=this->y-target->y;
+-    double k=dy/dx;
+-    double b=this->y-k*this->x;
++    double k, b, p = -1.0;
++    if(fabs(dx) > 0.1)
++    {
++        k=dy/dx;
++        b=this->y-k*this->x;
++    }
++    else k = 1, b = -this -> x, p = 0;
+     for(std::list<Ant>::iterator i=ants.begin();i!=ants.end();++i){
+-        if(Cross(k,-1.0,b,i->x,i->y)&&InSegment(this->x,this->y,target->x,target->y,i->x,i->y)&&SqrEucDis(this->x,this->y,i->x,i->y)<=SqrEucDis(this->x,this->y,target->x,target->y)){
++        if(Cross(k,p,b,i->x,i->y)&&InSegment(this->x,this->y,target->x,target->y,i->x,i->y)&&SqrEucDis(this->x,this->y,i->x,i->y)<=SqrEucDis(this->x,this->y,target->x,target->y)){
+             i->HP-=d;
+         }
+     }
+@@ -162,9 +167,9 @@ void Ant::NormalMove(int dir){
+ }
+ 
+ void Ant::SpecialMove(int dir){
+-    dir=(dir-1)%4;
++    dir=(dir+3)%4;
+     while(!this->CheckAvailable(this->x+dx[dir],this->y+dy[dir]))
+-        dir=(dir-1)%4;
++        dir=(dir+3)%4;
+     this->NormalMove(dir);
+ }
+ 
+@@ -196,7 +201,8 @@ void CleanDeath(){
+ void DecreaseSignal(){
+     for(int i=0;i<=n;i++){
+         for(int j=0;j<=m;j++){
+-            --sign[i][j];
++            if(sign[i][j] > 0)
++                --sign[i][j];
+         }
+     }
+ }
