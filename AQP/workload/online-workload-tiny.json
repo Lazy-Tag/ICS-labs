@@ -1,0 +1,100 @@
+{"result_col": [["DEST_STATE_ABR"], ["sum", "DISTANCE"]], "predicate": [{"col": "UNIQUE_CARRIER", "lb": "NW", "ub": "NW"}], "groupby": "DEST_STATE_ABR", "ground_truth": [["KY", 536.8]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "DEST_STATE_ABR", "lb": "GA", "ub": "GA"}, {"col": "TAXI_IN", "lb": 10.968654772549296, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[1]]}
+{"result_col": [["sum", "TAXI_IN"]], "predicate": [{"col": "YEAR_DATE", "lb": "_None_", "ub": 2006.6125870258306}, {"col": "DEP_DELAY", "lb": 1201.3061849226892, "ub": "_None_"}, {"col": "DISTANCE", "lb": 542.1155374436393, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[14.1]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "YEAR_DATE", "lb": 2010.4873208834276, "ub": "_None_"}, {"col": "TAXI_IN", "lb": "_None_", "ub": 11.159229133445283}, {"col": "ARR_DELAY", "lb": 983.3635424194318, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[1]]}
+{"result_col": [["avg", "DEP_DELAY"]], "predicate": [{"col": "TAXI_IN", "lb": 9.846950304733504, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[1206.7666666666667]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "YEAR_DATE", "lb": 2003.8072491225157, "ub": 2010.1927508774843}, {"col": "UNIQUE_CARRIER", "lb": "DL", "ub": "DL"}, {"col": "ORIGIN_STATE_ABR", "lb": "TX", "ub": "TX"}], "groupby": "_None_", "ground_truth": [[1]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "DISTANCE", "lb": 589.1329136725404, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[1]]}
+{"result_col": [["UNIQUE_CARRIER"], ["count", "*"]], "predicate": [{"col": "DEST_STATE_ABR", "lb": "GA", "ub": "GA"}], "groupby": "UNIQUE_CARRIER", "ground_truth": [["DL", 1]]}
+{"result_col": [["sum", "DEP_DELAY"]], "predicate": [{"col": "DEP_DELAY", "lb": 1202.3506501659408, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[4827.7]]}
+{"result_col": [["ORIGIN_STATE_ABR"], ["sum", "TAXI_IN"]], "predicate": [{"col": "UNIQUE_CARRIER", "lb": "DL", "ub": "DL"}], "groupby": "ORIGIN_STATE_ABR", "ground_truth": [["LA", 6.7], ["TX", 3.9], ["MA", 14.1]]}
+{"result_col": [["DEST"], ["avg", "DEP_DELAY"]], "predicate": [{"col": "DEST_STATE_ABR", "lb": "KY", "ub": "KY"}], "groupby": "DEST", "ground_truth": [["CVG", 1207.6]]}
+{"result_col": [["avg", "TAXI_IN"]], "predicate": [{"col": "ARR_DELAY", "lb": 981.8123132261701, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[6.7]]}
+{"result_col": [["DEST_STATE_ABR"], ["sum", "DISTANCE"]], "predicate": [{"col": "TAXI_OUT", "lb": "_None_", "ub": 10.555604524750605}], "groupby": "DEST_STATE_ABR", "ground_truth": [["CA", 272.6]]}
+{"result_col": [["sum", "YEAR_DATE"]], "predicate": [{"col": "TAXI_OUT", "lb": 13.320342787598577, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[6006.0]]}
+{"result_col": [["sum", "DISTANCE"]], "predicate": [{"col": "ORIGIN_STATE_ABR", "lb": "TX", "ub": "TX"}, {"col": "ARR_DELAY", "lb": "_None_", "ub": 973.3279980609028}], "groupby": "_None_", "ground_truth": [[272.6]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "ORIGIN", "lb": "ELP", "ub": "ELP"}], "groupby": "_None_", "ground_truth": [[1]]}
+{"result_col": [["DEST"], ["avg", "TAXI_OUT"]], "predicate": [{"col": "DEST", "lb": "CVG", "ub": "CVG"}], "groupby": "DEST", "ground_truth": [["CVG", 14.0]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "ORIGIN", "lb": "ELP", "ub": "ELP"}], "groupby": "_None_", "ground_truth": [[1]]}
+{"result_col": [["UNIQUE_CARRIER"], ["count", "*"]], "predicate": [{"col": "TAXI_OUT", "lb": 9.42750503627376, "ub": "_None_"}], "groupby": "UNIQUE_CARRIER", "ground_truth": [["DL", 2], ["NW", 2]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "DEST", "lb": "CVG", "ub": "CVG"}], "groupby": "_None_", "ground_truth": [[2]]}
+{"result_col": [["ORIGIN"], ["sum", "TAXI_OUT"]], "predicate": [{"col": "DEP_DELAY", "lb": 1202.8219592367784, "ub": "_None_"}], "groupby": "ORIGIN", "ground_truth": [["MSY", 10.7], ["MSP", 28.0], ["BOS", 16.9]]}
+{"result_col": [["sum", "AIR_TIME"]], "predicate": [{"col": "YEAR_DATE", "lb": 2008.1666415173959, "ub": "_None_"}, {"col": "ARR_DELAY", "lb": 984.7969314659701, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[1134.4]]}
+{"result_col": [["sum", "ARR_DELAY"]], "predicate": [{"col": "UNIQUE_CARRIER", "lb": "DL", "ub": "DL"}, {"col": "DEST", "lb": "ATL", "ub": "ATL"}], "groupby": "_None_", "ground_truth": [[979.9]]}
+{"result_col": [["sum", "YEAR_DATE"]], "predicate": [{"col": "DEST_STATE_ABR", "lb": "KY", "ub": "KY"}, {"col": "DISTANCE", "lb": "_None_", "ub": 628.6936102869613}], "groupby": "_None_", "ground_truth": [[4004.0]]}
+{"result_col": [["avg", "DISTANCE"]], "predicate": [{"col": "ORIGIN", "lb": "MSY", "ub": "MSY"}], "groupby": "_None_", "ground_truth": [[161.6]]}
+{"result_col": [["sum", "AIR_TIME"]], "predicate": [{"col": "ORIGIN_STATE_ABR", "lb": "TX", "ub": "TX"}, {"col": "AIR_TIME", "lb": "_None_", "ub": 1201.835265252826}], "groupby": "_None_", "ground_truth": [[1153.8]]}
+{"result_col": [["ORIGIN_STATE_ABR"], ["sum", "AIR_TIME"]], "predicate": [{"col": "ARR_DELAY", "lb": "_None_", "ub": 987.4489686088181}], "groupby": "ORIGIN_STATE_ABR", "ground_truth": [["MN", 2293.6], ["TX", 1153.8], ["MA", 1244.8]]}
+{"result_col": [["ORIGIN_STATE_ABR"], ["avg", "DISTANCE"]], "predicate": [{"col": "ARR_DELAY", "lb": 968.592515004175, "ub": 991.207484995825}], "groupby": "ORIGIN_STATE_ABR", "ground_truth": [["MN", 268.4], ["MA", 908.5]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "ORIGIN_STATE_ABR", "lb": "TX", "ub": "TX"}, {"col": "DEST", "lb": "OAK", "ub": "OAK"}, {"col": "TAXI_IN", "lb": "_None_", "ub": 7.246947739802599}], "groupby": "_None_", "ground_truth": [[1]]}
+{"result_col": [["DEST"], ["count", "*"]], "predicate": [{"col": "DISTANCE", "lb": 580.2336968211232, "ub": "_None_"}], "groupby": "DEST", "ground_truth": [["ATL", 1]]}
+{"result_col": [["avg", "DEP_DELAY"]], "predicate": [{"col": "DEST_STATE_ABR", "lb": "GA", "ub": "GA"}, {"col": "DISTANCE", "lb": 720.0358637051814, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[1205.1]]}
+{"result_col": [["avg", "YEAR_DATE"]], "predicate": [{"col": "TAXI_OUT", "lb": 13.14747807911831, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[2002.0]]}
+{"result_col": [["sum", "ARR_DELAY"]], "predicate": [{"col": "DISTANCE", "lb": "_None_", "ub": 523.5457125603727}], "groupby": "_None_", "ground_truth": [[3906.2]]}
+{"result_col": [["UNIQUE_CARRIER"], ["count", "*"]], "predicate": [{"col": "ORIGIN_STATE_ABR", "lb": "MN", "ub": "MN"}], "groupby": "UNIQUE_CARRIER", "ground_truth": [["NW", 2]]}
+{"result_col": [["sum", "DISTANCE"]], "predicate": [{"col": "UNIQUE_CARRIER", "lb": "DL", "ub": "DL"}], "groupby": "_None_", "ground_truth": [[1342.7]]}
+{"result_col": [["sum", "DISTANCE"]], "predicate": [{"col": "YEAR_DATE", "lb": "_None_", "ub": 2005.2128782101586}, {"col": "UNIQUE_CARRIER", "lb": "NW", "ub": "NW"}, {"col": "DEST_STATE_ABR", "lb": "KY", "ub": "KY"}], "groupby": "_None_", "ground_truth": [[536.8]]}
+{"result_col": [["avg", "TAXI_IN"]], "predicate": [{"col": "YEAR_DATE", "lb": "_None_", "ub": 2007.4176606518788}, {"col": "ORIGIN_STATE_ABR", "lb": "MN", "ub": "MN"}], "groupby": "_None_", "ground_truth": [[10.6]]}
+{"result_col": [["avg", "TAXI_OUT"]], "predicate": [{"col": "DEST", "lb": "ATL", "ub": "ATL"}], "groupby": "_None_", "ground_truth": [[16.9]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "TAXI_OUT", "lb": "_None_", "ub": 9.757322639876813}, {"col": "DISTANCE", "lb": "_None_", "ub": 506.3075982024693}], "groupby": "_None_", "ground_truth": [[1]]}
+{"result_col": [["sum", "TAXI_IN"]], "predicate": [{"col": "ORIGIN_STATE_ABR", "lb": "LA", "ub": "LA"}, {"col": "DEP_DELAY", "lb": 1203.7804611538015, "ub": "_None_"}, {"col": "TAXI_IN", "lb": "_None_", "ub": 9.500151429166042}], "groupby": "_None_", "ground_truth": [[6.7]]}
+{"result_col": [["avg", "ARR_DELAY"]], "predicate": [{"col": "UNIQUE_CARRIER", "lb": "DL", "ub": "DL"}, {"col": "DEST", "lb": "OAK", "ub": "OAK"}, {"col": "AIR_TIME", "lb": "_None_", "ub": 1188.5171609917413}], "groupby": "_None_", "ground_truth": [[961.8]]}
+{"result_col": [["sum", "TAXI_OUT"]], "predicate": [{"col": "AIR_TIME", "lb": "_None_", "ub": 1178.8304963052003}], "groupby": "_None_", "ground_truth": [[45.1]]}
+{"result_col": [["sum", "DEP_DELAY"]], "predicate": [{"col": "TAXI_OUT", "lb": "_None_", "ub": 15.127906806030314}, {"col": "ARR_DELAY", "lb": 978.7161187799368, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[1207.4]]}
+{"result_col": [["avg", "ARR_DELAY"]], "predicate": [{"col": "DEP_DELAY", "lb": 1203.759990818414, "ub": "_None_"}, {"col": "ARR_DELAY", "lb": 965.06174624046, "ub": 983.93825375954}, {"col": "DISTANCE", "lb": "_None_", "ub": 621.8306041721931}], "groupby": "_None_", "ground_truth": [[974.5]]}
+{"result_col": [["avg", "ARR_DELAY"]], "predicate": [{"col": "TAXI_IN", "lb": "_None_", "ub": 7.02583956095436}], "groupby": "_None_", "ground_truth": [[978.5999999999999]]}
+{"result_col": [["UNIQUE_CARRIER"], ["count", "*"]], "predicate": [{"col": "TAXI_OUT", "lb": "_None_", "ub": 15.910188571097205}], "groupby": "UNIQUE_CARRIER", "ground_truth": [["DL", 2], ["NW", 2]]}
+{"result_col": [["avg", "DISTANCE"]], "predicate": [{"col": "TAXI_OUT", "lb": 9.189798651169959, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[401.725]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "ORIGIN_STATE_ABR", "lb": "MA", "ub": "MA"}], "groupby": "_None_", "ground_truth": [[1]]}
+{"result_col": [["sum", "ARR_DELAY"]], "predicate": [{"col": "DEST_STATE_ABR", "lb": "TX", "ub": "TX"}], "groupby": "_None_", "ground_truth": [[995.4]]}
+{"result_col": [["UNIQUE_CARRIER"], ["sum", "TAXI_IN"]], "predicate": [{"col": "DISTANCE", "lb": "_None_", "ub": 556.472317275241}], "groupby": "UNIQUE_CARRIER", "ground_truth": [["DL", 10.6], ["NW", 21.2]]}
+{"result_col": [["UNIQUE_CARRIER"], ["count", "*"]], "predicate": [{"col": "ORIGIN_STATE_ABR", "lb": "MN", "ub": "MN"}], "groupby": "UNIQUE_CARRIER", "ground_truth": [["NW", 2]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "ARR_DELAY", "lb": "_None_", "ub": 988.0609430002577}], "groupby": "_None_", "ground_truth": [[4]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "ORIGIN_STATE_ABR", "lb": "MN", "ub": "MN"}, {"col": "ARR_DELAY", "lb": 965.8899472527494, "ub": 983.1100527472506}], "groupby": "_None_", "ground_truth": [[2]]}
+{"result_col": [["sum", "TAXI_IN"]], "predicate": [{"col": "DEST_STATE_ABR", "lb": "KY", "ub": "KY"}], "groupby": "_None_", "ground_truth": [[21.2]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "ORIGIN_STATE_ABR", "lb": "LA", "ub": "LA"}], "groupby": "_None_", "ground_truth": [[1]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "UNIQUE_CARRIER", "lb": "DL", "ub": "DL"}, {"col": "ORIGIN", "lb": "MSY", "ub": "MSY"}, {"col": "DISTANCE", "lb": "_None_", "ub": 462.3055209692626}], "groupby": "_None_", "ground_truth": [[1]]}
+{"result_col": [["avg", "ARR_DELAY"]], "predicate": [{"col": "ORIGIN", "lb": "ELP", "ub": "ELP"}, {"col": "TAXI_IN", "lb": "_None_", "ub": 8.367806477403645}, {"col": "ARR_DELAY", "lb": "_None_", "ub": 975.5163779603031}], "groupby": "_None_", "ground_truth": [[961.8]]}
+{"result_col": [["avg", "DEP_DELAY"]], "predicate": [{"col": "YEAR_DATE", "lb": "_None_", "ub": 2006.8034631082396}, {"col": "UNIQUE_CARRIER", "lb": "NW", "ub": "NW"}], "groupby": "_None_", "ground_truth": [[1207.6]]}
+{"result_col": [["avg", "YEAR_DATE"]], "predicate": [{"col": "AIR_TIME", "lb": "_None_", "ub": 1183.8119685471129}], "groupby": "_None_", "ground_truth": [[2006.25]]}
+{"result_col": [["sum", "YEAR_DATE"]], "predicate": [{"col": "ORIGIN_STATE_ABR", "lb": "LA", "ub": "LA"}, {"col": "ARR_DELAY", "lb": 979.6296644992486, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[2014.0]]}
+{"result_col": [["ORIGIN_STATE_ABR"], ["sum", "DEP_DELAY"]], "predicate": [{"col": "ARR_DELAY", "lb": "_None_", "ub": 987.9249305332661}], "groupby": "ORIGIN_STATE_ABR", "ground_truth": [["MN", 2415.2], ["TX", 1194.4], ["MA", 1205.1]]}
+{"result_col": [["sum", "DEP_DELAY"]], "predicate": [{"col": "YEAR_DATE", "lb": "_None_", "ub": 2005.6704724882757}, {"col": "ORIGIN", "lb": "BOS", "ub": "BOS"}, {"col": "DEST", "lb": "ATL", "ub": "ATL"}], "groupby": "_None_", "ground_truth": [[1205.1]]}
+{"result_col": [["UNIQUE_CARRIER"], ["avg", "YEAR_DATE"]], "predicate": [{"col": "DEST_STATE_ABR", "lb": "GA", "ub": "GA"}], "groupby": "UNIQUE_CARRIER", "ground_truth": [["DL", 2002.0]]}
+{"result_col": [["ORIGIN"], ["sum", "DISTANCE"]], "predicate": [{"col": "UNIQUE_CARRIER", "lb": "DL", "ub": "DL"}], "groupby": "ORIGIN", "ground_truth": [["MSY", 161.6], ["ELP", 272.6], ["BOS", 908.5]]}
+{"result_col": [["UNIQUE_CARRIER"], ["count", "*"]], "predicate": [{"col": "TAXI_IN", "lb": 5.802051272232428, "ub": "_None_"}], "groupby": "UNIQUE_CARRIER", "ground_truth": [["DL", 2], ["NW", 2]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "ORIGIN", "lb": "MSY", "ub": "MSY"}, {"col": "DEST_STATE_ABR", "lb": "TX", "ub": "TX"}, {"col": "TAXI_IN", "lb": 4.0114874121842785, "ub": 9.388512587815722}], "groupby": "_None_", "ground_truth": [[1]]}
+{"result_col": [["DEST"], ["sum", "TAXI_IN"]], "predicate": [{"col": "DEP_DELAY", "lb": 1203.0179159809268, "ub": "_None_"}], "groupby": "DEST", "ground_truth": [["DFW", 6.7], ["CVG", 21.2], ["ATL", 14.1]]}
+{"result_col": [["ORIGIN"], ["count", "*"]], "predicate": [{"col": "TAXI_OUT", "lb": "_None_", "ub": 9.477521876131643}], "groupby": "ORIGIN", "ground_truth": [["ELP", 1]]}
+{"result_col": [["ORIGIN_STATE_ABR"], ["count", "*"]], "predicate": [{"col": "ORIGIN", "lb": "BOS", "ub": "BOS"}], "groupby": "ORIGIN_STATE_ABR", "ground_truth": [["MA", 1]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "ORIGIN_STATE_ABR", "lb": "MA", "ub": "MA"}, {"col": "DEST_STATE_ABR", "lb": "GA", "ub": "GA"}], "groupby": "_None_", "ground_truth": [[1]]}
+{"result_col": [["avg", "AIR_TIME"]], "predicate": [{"col": "DEST_STATE_ABR", "lb": "KY", "ub": "KY"}], "groupby": "_None_", "ground_truth": [[1146.8]]}
+{"result_col": [["avg", "ARR_DELAY"]], "predicate": [{"col": "ORIGIN_STATE_ABR", "lb": "MN", "ub": "MN"}, {"col": "DEST", "lb": "CVG", "ub": "CVG"}, {"col": "ARR_DELAY", "lb": 963.2306846626368, "ub": 985.7693153373632}], "groupby": "_None_", "ground_truth": [[974.5]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "DISTANCE", "lb": "_None_", "ub": 487.29491860926146}], "groupby": "_None_", "ground_truth": [[4]]}
+{"result_col": [["sum", "DISTANCE"]], "predicate": [{"col": "ORIGIN_STATE_ABR", "lb": "MA", "ub": "MA"}, {"col": "TAXI_OUT", "lb": 12.23465235636924, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[908.5]]}
+{"result_col": [["sum", "AIR_TIME"]], "predicate": [{"col": "ORIGIN_STATE_ABR", "lb": "LA", "ub": "LA"}, {"col": "DEP_DELAY", "lb": 1201.0912261820147, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[1134.4]]}
+{"result_col": [["ORIGIN"], ["sum", "YEAR_DATE"]], "predicate": [{"col": "DEST_STATE_ABR", "lb": "TX", "ub": "TX"}], "groupby": "ORIGIN", "ground_truth": [["MSY", 2014.0]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "ORIGIN_STATE_ABR", "lb": "TX", "ub": "TX"}], "groupby": "_None_", "ground_truth": [[1]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "DEST_STATE_ABR", "lb": "GA", "ub": "GA"}], "groupby": "_None_", "ground_truth": [[1]]}
+{"result_col": [["sum", "TAXI_IN"]], "predicate": [{"col": "DEST", "lb": "CVG", "ub": "CVG"}, {"col": "TAXI_OUT", "lb": 9.428228678729994, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[21.2]]}
+{"result_col": [["sum", "TAXI_IN"]], "predicate": [{"col": "DISTANCE", "lb": 613.6305756897036, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[14.1]]}
+{"result_col": [["sum", "TAXI_OUT"]], "predicate": [{"col": "TAXI_OUT", "lb": "_None_", "ub": 15.087445868887443}], "groupby": "_None_", "ground_truth": [[45.1]]}
+{"result_col": [["sum", "ARR_DELAY"]], "predicate": [{"col": "YEAR_DATE", "lb": "_None_", "ub": 2006.0339766487534}, {"col": "DEP_DELAY", "lb": 1201.7994513118085, "ub": "_None_"}, {"col": "ARR_DELAY", "lb": "_None_", "ub": 988.7004031760816}], "groupby": "_None_", "ground_truth": [[2928.9]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "DEST", "lb": "ATL", "ub": "ATL"}, {"col": "DEST_STATE_ABR", "lb": "GA", "ub": "GA"}, {"col": "DISTANCE", "lb": 587.6340787814287, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[1]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "YEAR_DATE", "lb": 2009.889405092099, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[1]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "YEAR_DATE", "lb": 2009.131746744071, "ub": "_None_"}, {"col": "DEST", "lb": "DFW", "ub": "DFW"}], "groupby": "_None_", "ground_truth": [[1]]}
+{"result_col": [["DEST"], ["count", "*"]], "predicate": [{"col": "DEST", "lb": "DFW", "ub": "DFW"}], "groupby": "DEST", "ground_truth": [["DFW", 1]]}
+{"result_col": [["avg", "YEAR_DATE"]], "predicate": [{"col": "DEST", "lb": "CVG", "ub": "CVG"}], "groupby": "_None_", "ground_truth": [[2002.0]]}
+{"result_col": [["avg", "DEP_DELAY"]], "predicate": [{"col": "DEST", "lb": "CVG", "ub": "CVG"}, {"col": "TAXI_OUT", "lb": 10.27806717620896, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[1207.6]]}
+{"result_col": [["sum", "ARR_DELAY"]], "predicate": [{"col": "DEST", "lb": "DFW", "ub": "DFW"}, {"col": "DISTANCE", "lb": "_None_", "ub": 496.11317137255844}], "groupby": "_None_", "ground_truth": [[995.4]]}
+{"result_col": [["avg", "AIR_TIME"]], "predicate": [{"col": "ORIGIN_STATE_ABR", "lb": "MN", "ub": "MN"}, {"col": "DEST", "lb": "CVG", "ub": "CVG"}, {"col": "DEST_STATE_ABR", "lb": "KY", "ub": "KY"}], "groupby": "_None_", "ground_truth": [[1146.8]]}
+{"result_col": [["DEST_STATE_ABR"], ["count", "*"]], "predicate": [{"col": "TAXI_OUT", "lb": 10.594476305564049, "ub": "_None_"}], "groupby": "DEST_STATE_ABR", "ground_truth": [["TX", 1], ["KY", 2], ["GA", 1]]}
+{"result_col": [["sum", "AIR_TIME"]], "predicate": [{"col": "TAXI_OUT", "lb": "_None_", "ub": 9.96107560532041}], "groupby": "_None_", "ground_truth": [[1153.8]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "YEAR_DATE", "lb": "_None_", "ub": 2005.1994915853322}, {"col": "AIR_TIME", "lb": "_None_", "ub": 1181.750029361051}, {"col": "DISTANCE", "lb": "_None_", "ub": 474.2395468815985}], "groupby": "_None_", "ground_truth": [[2]]}
+{"result_col": [["avg", "DISTANCE"]], "predicate": [{"col": "YEAR_DATE", "lb": "_None_", "ub": 2006.165994035366}, {"col": "DEP_DELAY", "lb": 1202.5574575309959, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[481.7666666666667]]}
+{"result_col": [["sum", "YEAR_DATE"]], "predicate": [{"col": "DEST", "lb": "CVG", "ub": "CVG"}], "groupby": "_None_", "ground_truth": [[4004.0]]}
+{"result_col": [["DEST"], ["avg", "ARR_DELAY"]], "predicate": [{"col": "DEP_DELAY", "lb": 1202.9651623993364, "ub": "_None_"}], "groupby": "DEST", "ground_truth": [["DFW", 995.4], ["CVG", 974.5], ["ATL", 979.9]]}
+{"result_col": [["avg", "TAXI_OUT"]], "predicate": [{"col": "DEP_DELAY", "lb": 1201.3840712941005, "ub": "_None_"}], "groupby": "_None_", "ground_truth": [[13.899999999999999]]}
+{"result_col": [["count", "*"]], "predicate": [{"col": "UNIQUE_CARRIER", "lb": "NW", "ub": "NW"}, {"col": "DEST_STATE_ABR", "lb": "KY", "ub": "KY"}, {"col": "AIR_TIME", "lb": "_None_", "ub": 1200.5499550072013}], "groupby": "_None_", "ground_truth": [[2]]}
+{"result_col": [["DEST"], ["avg", "DEP_DELAY"]], "predicate": [{"col": "DISTANCE", "lb": "_None_", "ub": 557.2570722581801}], "groupby": "DEST", "ground_truth": [["DFW", 1207.4], ["CVG", 1207.6], ["OAK", 1194.4]]}
+{"result_col": [["sum", "TAXI_OUT"]], "predicate": [{"col": "UNIQUE_CARRIER", "lb": "DL", "ub": "DL"}, {"col": "ORIGIN", "lb": "ELP", "ub": "ELP"}, {"col": "DEST", "lb": "OAK", "ub": "OAK"}], "groupby": "_None_", "ground_truth": [[6.4]]}
